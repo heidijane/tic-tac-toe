@@ -1,0 +1,15 @@
+#container {
+    text-align: center;
+}
+
+#grid {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+}
+
+#grid div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid darkgray;
+}
