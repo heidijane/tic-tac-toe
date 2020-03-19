@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
 #container {
     text-align: center;
     display: flex;
@@ -13,4 +14,19 @@
     width: 100px;
     height: 100px;
     border: 1px solid darkgray;
+    font-family: 'Nunito', sans-serif;
+    font-size: 5em;
+    line-height: 90px;
+}
+
+.grid--x {
+    color: red;
+}
+
+.grid--o {
+    color: blue;
+}
+
+.highlight {
+    background-color: yellow;
 }

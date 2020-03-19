@@ -1,7 +1,3 @@
-import { ShowGrid } from "./ShowGrid.js"
-import { createNewGame } from "./GameData.js"
-import { updateGrid } from "./UpdateGrid.js"
+import { startGame } from "./CreateNewGame.js";
 
-const gameData = createNewGame()
-ShowGrid(gameData)
-updateGrid(gameData)
+startGame()

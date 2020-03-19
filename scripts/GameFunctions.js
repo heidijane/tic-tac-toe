@@ -1,3 +1,5 @@
+import { createNewGameButton } from "./NewGameButton.js"
+
 //updates the total number of clicks
 export const updateTurn = (turn) => {
     return (turn + 1)
@@ -74,36 +76,60 @@ export const checkWinStatus = (grid) => {
 
     //horizontal wins
     if (a1 === a2 && a2 === a3 && a1 !== '') {
+        document.querySelector("#grid--a1").classList.add("highlight")
+        document.querySelector("#grid--a2").classList.add("highlight")
+        document.querySelector("#grid--a3").classList.add("highlight")
         return true
     }
 
     if (b1 === b2 && b2 === b3 && b1 !== '') {
+        document.querySelector("#grid--b1").classList.add("highlight")
+        document.querySelector("#grid--b2").classList.add("highlight")
+        document.querySelector("#grid--b3").classList.add("highlight")
         return true
     }
 
     if (c1 === c2 && c2 === c3 && c1 !== '') {
+        document.querySelector("#grid--c1").classList.add("highlight")
+        document.querySelector("#grid--c2").classList.add("highlight")
+        document.querySelector("#grid--c3").classList.add("highlight")
         return true
     }
 
     //vertical wins
     if (a1 === b1 && b1 === c1 && a1 !== '') {
+        document.querySelector("#grid--a1").classList.add("highlight")
+        document.querySelector("#grid--b1").classList.add("highlight")
+        document.querySelector("#grid--c1").classList.add("highlight")
         return true
     }
 
     if (a2 === b2 && b2 === c2 && a2 !== '') {
+        document.querySelector("#grid--a2").classList.add("highlight")
+        document.querySelector("#grid--b2").classList.add("highlight")
+        document.querySelector("#grid--c2").classList.add("highlight")
         return true
     }
 
     if (a3 === b3 && b3 === c3 && a3 !== '') {
+        document.querySelector("#grid--a3").classList.add("highlight")
+        document.querySelector("#grid--b3").classList.add("highlight")
+        document.querySelector("#grid--c3").classList.add("highlight")
         return true
     }
 
     //diagonal wins
     if (a1 === b2 && b2 === c3 && a1 !== '') {
+        document.querySelector("#grid--a1").classList.add("highlight")
+        document.querySelector("#grid--b2").classList.add("highlight")
+        document.querySelector("#grid--c3").classList.add("highlight")
         return true
     }
 
     if (c1 === b2 && b2 === a3 && c1 !== '') {
+        document.querySelector("#grid--c1").classList.add("highlight")
+        document.querySelector("#grid--b2").classList.add("highlight")
+        document.querySelector("#grid--a3").classList.add("highlight")
         return true
     }
 
@@ -120,4 +146,5 @@ export const endGame = (gameData, winner) => {
         gameTextContainer.innerHTML = `Player ${winner} Wins!`
     }
 
+    gameTextContainer.innerHTML += createNewGameButton()
 }
