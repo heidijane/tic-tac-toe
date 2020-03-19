@@ -1,9 +1,10 @@
 #container {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #grid {
-    width: 500px;
     display: grid;
     grid-template-columns: 100px 100px 100px;
 }
