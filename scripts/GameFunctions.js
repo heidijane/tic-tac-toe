@@ -133,6 +133,8 @@ export const checkWinStatus = (grid) => {
         return true
     }
 
+    return false
+
 }
 
 //ends game and shows alert message letting user know who wins
@@ -145,6 +147,8 @@ export const endGame = (gameData, winner) => {
     } else {
         gameTextContainer.innerHTML = `Player ${winner} Wins!`
     }
+
+    document.querySelectorAll(".pointer").forEach(element => element.classList.remove("pointer"))
 
     gameTextContainer.innerHTML += createNewGameButton()
 }

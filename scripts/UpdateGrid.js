@@ -22,17 +22,20 @@ export const updateGrid = (gameData) => {
                 }
 
                 squareToUpdate.innerHTML = `<span class="grid--${symbol}">${symbol}</span>`
+                squareToUpdate.classList.remove("pointer")
 
                 gameData.grid = updateGridArray(clickedSquare, gameData.grid, symbol)
 
                 gameData.turn = updateTurn(gameData.turn)
 
-                if (gameData.turn > 8) {
+                const winStatus = checkWinStatus(gameData.grid)
+
+                if (gameData.turn > 8 && winStatus === false) {
                     //game is tied, end game
                     endGame(gameData, 0)
                 } else {
                     //check to see if anyone has won the game
-                    if (checkWinStatus(gameData.grid)) {
+                    if (winStatus) {
                         endGame(gameData, gameData.currentPlayer)
                     } else {
                         gameData.currentPlayer = updatePlayer(gameData.currentPlayer)

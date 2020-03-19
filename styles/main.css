@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;900&display=swap');
 body {
-    background-color: #bbbbbb;
+    background-color: #eeeeee;
 }
 
 #container {
@@ -10,19 +10,20 @@ body {
 }
 
 #grid {
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-style: hidden;
 }
 
-#grid div {
+#grid td {
     width: 100px;
     height: 100px;
-    background-color: #f0f0f0;
-    border: 2px solid #bbbbbb;
+    border: 5px solid #828282;
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     font-size: 5em;
     line-height: 90px;
+    cursor: not-allowed;
 }
 
 .grid--x {
@@ -34,10 +35,16 @@ body {
 }
 
 .highlight {
-    background-color: #fcf6ad !important;
+    background-color: white !important;
+}
+
+.pointer {
+    cursor: pointer !important;
 }
 
 #gameText {
     font-family: 'Nunito', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 1em;
 }

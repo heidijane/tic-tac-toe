@@ -5,23 +5,30 @@
 const eventHub = document.querySelector("#container")
 
 export const createGrid = (gameData) => {
+
     return `
         <div id="wrapper">
-            <div id="grid">
+            <table id="grid">
 
-                <div id="grid--a1">${gameData[0]}</div>
-                <div id="grid--a2">${gameData[1]}</div>
-                <div id="grid--a3">${gameData[2]}</div>
+                <tr>    
+                    <td id="grid--a1" class="pointer">${gameData[0]}</td>
+                    <td id="grid--a2" class="pointer">${gameData[1]}</td>
+                    <td id="grid--a3" class="pointer">${gameData[2]}</td>
+                </tr>
 
-                <div id="grid--b1">${gameData[3]}</div>
-                <div id="grid--b2">${gameData[4]}</div>
-                <div id="grid--b3">${gameData[5]}</div>
+                <tr>
+                    <td id="grid--b1" class="pointer">${gameData[3]}</td>
+                    <td id="grid--b2" class="pointer">${gameData[4]}</td>
+                    <td id="grid--b3" class="pointer">${gameData[5]}</td>
+                </tr>
     
-                <div id="grid--c1">${gameData[6]}</div>
-                <div id="grid--c2">${gameData[7]}</div>
-                <div id="grid--c3">${gameData[8]}</div>
+                <tr>
+                    <td id="grid--c1" class="pointer">${gameData[6]}</td>
+                    <td id="grid--c2" class="pointer">${gameData[7]}</td>
+                    <td id="grid--c3" class="pointer">${gameData[8]}</td>
+                </tr>
 
-            </div>
+            </table>
             <div id="gameText">
                 Player 1's Turn
             </div>
